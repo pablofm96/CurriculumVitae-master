@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body data-spy="scroll" data-target="#navbar" data-offset="0">
+    <div id="app" v-if="datos">
+        <nav id="navbar" class="navbar sticky-top navbar-light bg-light">
+            <a class="navbar-brand" href="#">Curriculum</a>
+            <button class="btn btn-primary" v-if="idioma" v-on:click="idiomaCambiar()">Inglés</button>
+            <button class="btn btn-primary" v-if="!idioma" v-on:click="idiomaCambiar()">Spanish</button>
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="#sobremi">{{obtenerjson.sobremi[0].sobre}}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#experiencia">{{obtenerjson.experienciaprofesional[0].experiencia}}</a>
+              </li>
+              <li>
+                  <a class="nav-link" href="#educacion">{{obtenerjson.educacion[0].texto}}</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#destrezas">{{obtenerjson.destrezas[0].texto}}</a>
+              </li>
+              <li>
+                  <a class="nav-link" href="#proyectos">{{obtenerjson.proyectos[0].texto}}</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#idiomas">{{obtenerjson.idiomas[0].texto}}</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#referencia">{{obtenerjson.referencias[0].texto}}</a>
+              </li>
+              <li>
+              <a class="nav-link" href="#contacto">{{obtenerjson.contacto[0].texto}}</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <div id="sobremi">
+                <h4 id="fat">{{obtenerjson.sobremi[0].sobre}}</h4>
+                <p>{{obtenerjson.sobremi[0].nombre}} {{obtenerjson.sobremi[0].apellidos}}</p>
+                <p>{{obtenerjson.sobremi[0].fecha_nacimiento}}</p>
+                <p>{{obtenerjson.sobremi[0].telefono}}</p>
+                <p>{{obtenerjson.sobremi[0].direccion}}</p>
+                <p>{{obtenerjson.sobremi[0].descripcion}}</p>
+                <img :src="obtenerjson.sobremi[0].redes_sociales[0].imagen_github">
+            </div>
+            <div id="experiencia">
+                <h4 id="fat">{{obtenerjson.experienciaprofesional[0].experiencia}}</h4>
+                <p>...</p>
+            </div>
+            <div id="educacion">
+                <h4 id="fat">{{obtenerjson.educacion[0].texto}}</h4>
+                <p>...</p>
+            </div>
+            <div id="destrezas">
+                <h4 id="fat">{{obtenerjson.destrezas[0].texto}}</h4>
+                <p>...</p>
+            </div>
+            <div id="proyectos">
+                <h4 id="fat">{{obtenerjson.proyectos[0].texto}}</h4>
+                <p>...</p>
+            </div>
+            <div id="idiomas">
+                <h4 id="fat">{{obtenerjson.idiomas[0].texto}}</h4>
+                <p>...</p>
+            </div>
+            <div id="referencia">
+                <h4 id="fat">{{obtenerjson.referencias[0].texto}}</h4>
+                <p>...</p>
+            </div>
+            <div id="contacto">
+                <h4 id="fat">{{obtenerjson.contacto[0].texto}}</h4>
+                <p>...</p>
+            </div>
+          </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js" integrity="sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

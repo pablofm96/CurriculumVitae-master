@@ -1,0 +1,149 @@
+{
+    "espanol":{
+        "sobremi":[
+            {
+            "sobre":"Sobre mi",
+            "nombre": "Pablo",
+            "apellidos": "Ferres Maldonado",
+            "fecha_nacimiento": "13/09/1996",
+            "direccion": "Motril, Granada, España",
+            "descripcion": "Estudio segundo de desarrollo de aplicaciones web",
+            "telefono": "654879125",
+            "redes_sociales":[
+                    {
+                    "github":  "https://github.com/pablofm96",
+                    "imagen_github": "./images/iconoGithub.png", 
+                    "linkedin": "https://www.linkedin.com/in/pablo-ferres-546242205/",
+                    "imagen_linkedin": "./images/iconoLinkedin.png"
+                    }
+                ]
+            }
+        
+        ],
+        "experienciaprofesional":[
+            {
+                "experiencia": "Experiencia profesional",
+                "empleo0": "Comercial en una tienda de electrodomésticos y colchones",
+                "empleo1": "Repartidor de colchones y electrodomésticos"
+            }
+        ],
+        "educacion":[
+            {
+                "texto": "Educación",
+                "estudio0":[
+                    {   
+                        "nombre": "ESO",
+                        "centro": "IES La Zafra",
+                        "fecha": "Junio de 2012"
+                    }
+                ]
+            }
+        ],
+        "destrezas": [
+            {
+                "texto": "Destrezas",
+                "destreza0": "Java",
+                "destreza1": "JavaScript",
+                "destreza2": "Vue"
+            }
+        ],
+        "proyectos": [
+            {
+                "texto":"Proyectos"
+            }
+        ],
+        "idiomas": [
+            {
+                "texto": "Idiomas",
+                "idioma0": "Español",
+                "idioma1": "Inglés"
+            }
+        ],
+        "referencias":[
+            {
+                "texto": "Referencias"
+            }
+        ],
+        "contacto":[
+            {
+            "texto": "Contacto",
+            "nombre": "Nombre",
+            "correo": "Correo Electrónico",
+            "mensaje": "Mensaje"
+            }
+        ]
+    },
+
+    "ingles":{
+        "sobremi":[
+            {
+            "sobre":"About me",
+            "nombre": "Pablo",
+            "apellidos": "Ferres Maldonado",
+            "fecha_nacimiento": "13/09/1996",
+            "direccion": "Motril, Granada, España",
+            "descripcion": "Estudio segundo de diseño de aplicaciones web",
+            "telefono": "654879125",
+            "redes_sociales":[
+                    {
+                    "github":  "https://github.com/pablofm96", 
+                    "linkedin": "https://www.linkedin.com/in/pablo-ferres-546242205/"
+                    }
+                ]
+            }
+        
+        ],
+        "experienciaprofesional":[
+            {
+                "experiencia": "Professional experience",
+                "empleo0": "Comercial en una tienda de electrodomésticos y colchones",
+                "empleo1": "Repartidor de colchones y electrodomésticos"
+            }
+        ],
+        "educacion":[
+            {
+                "texto": "Education",
+                "estudio0":[
+                    {   
+                        "nombre": "ESO",
+                        "centro": "IES La Zafra",
+                        "fecha": "Junio de 2012"
+                    }
+                ]
+            }
+        ],
+        "destrezas": [
+            {
+                "texto": "Skills",
+                "destreza0": "Java",
+                "destreza1": "JavaScript",
+                "destreza2": "Vue"
+            }
+        ],
+        "proyectos": [
+            {
+                "texto":"Projects"
+            }
+        ],
+        "idiomas": [
+            {
+                "texto": "Languages",
+                "idioma0": "Español",
+                "idioma1": "Inglés"
+            }
+        ],
+        "referencias":[
+            {
+                "texto": "References"
+            }
+        ],
+        "contacto":[
+            {
+            "texto": "Contact",
+            "nombre": "Nombre",
+            "correo": "Correo Electrónico",
+            "mensaje": "Mensaje"
+            }
+        ]
+    }
+}
