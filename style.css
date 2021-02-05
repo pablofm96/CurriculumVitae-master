@@ -1,3 +1,26 @@
 body{
     position: relative;
 }
+i{
+   font-size:100px;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .7s;
+  }
+  .fade-enter, .fade-leave-to{
+    opacity: 0;
+  } 
+
+input:invalid:required:focus{
+    border: 2px solid red;
+}
+
+input:valid{
+    border: 2px solid green;
+}
+
+
+  
+
+

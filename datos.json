@@ -11,6 +11,7 @@
             "telefono": "654879125",
             "redes_sociales":[
                     {
+                    "texto": "Enlaces de interés:",
                     "github":  "https://github.com/pablofm96",
                     "imagen_github": "./images/iconoGithub.png", 
                     "linkedin": "https://www.linkedin.com/in/pablo-ferres-546242205/",
@@ -24,17 +25,29 @@
             {
                 "experiencia": "Experiencia profesional",
                 "empleo0": "Comercial en una tienda de electrodomésticos y colchones",
-                "empleo1": "Repartidor de colchones y electrodomésticos"
+                "duracion0": "Duración: 2016-2018",
+                "empleo1": "Repartidor de colchones y electrodomésticos",
+                "duracion1": "Duración: Verano 2018, verano 2019, verano 2020"
             }
         ],
         "educacion":[
             {
                 "texto": "Educación",
+                "texto1": "Centro",
+                "texto2": "Título",
+                "texto3": "Fecha",
                 "estudio0":[
                     {   
                         "nombre": "ESO",
                         "centro": "IES La Zafra",
-                        "fecha": "Junio de 2012"
+                        "fecha": "Septiembre de 2008-Junio de 2012"
+                    }
+                ],
+                "estudio1":[
+                    {   
+                        "nombre": "DAW",
+                        "centro": "IES Francisco Ayala",
+                        "fecha": "Septiembre de 2018-Junio de 2021"
                     }
                 ]
             }
@@ -43,13 +56,34 @@
             {
                 "texto": "Destrezas",
                 "destreza0": "Java",
+                "imagen0": "./images/iconoJava.png",
                 "destreza1": "JavaScript",
-                "destreza2": "Vue"
+                "imagen1": "./images/iconoJavascript.png",
+                "destreza2": "Vue",
+                "imagen2": "./images/iconoVue.png",
+                "destreza3": "HTML5",
+                "imagen3": "./images/iconoHTML.png",
+                "destreza4": "Css3",
+                "imagen4": "./images/iconoCss3.png",
+                "destreza5": "Bootstrap",
+                "imagen5": "./images/iconoBootstrap.png"
             }
         ],
         "proyectos": [
             {
-                "texto":"Proyectos"
+                "texto":"Proyectos",
+                "proyecto0":[
+                    {
+                        "Enlace": "https://github.com/pablofm96/DesarrolloEntornoCliente/tree/main/Tema5/Juego",
+                        "Nombre": "Pong en JS"
+                    }
+                ],
+                "proyecto1":[
+                    {
+                        "Enlace": "https://pablofm96.github.io/ProyectoJQuery/",
+                        "Nombre": "Landing Page"
+                    }
+                ]
             }
         ],
         "idiomas": [
@@ -61,7 +95,19 @@
         ],
         "referencias":[
             {
-                "texto": "Referencias"
+                "texto": "Referencias",
+                "referencia0":[
+                    {
+                        "empresa": "Milar Motril",
+                        "comentario": "Responsable, educado y buen trabajador"
+                    }
+                ],
+                "referencia1":[
+                    {
+                        "empresa": "NatureDream",
+                        "comentario": "Tiene iniciativa y se adapta rápido al trabajo"
+                    }
+                ]
             }
         ],
         "contacto":[
@@ -69,7 +115,8 @@
             "texto": "Contacto",
             "nombre": "Nombre",
             "correo": "Correo Electrónico",
-            "mensaje": "Mensaje"
+            "mensaje": "Mensaje",
+            "enviar": "Enviar"
             }
         ]
     },
@@ -81,13 +128,16 @@
             "nombre": "Pablo",
             "apellidos": "Ferres Maldonado",
             "fecha_nacimiento": "13/09/1996",
-            "direccion": "Motril, Granada, España",
-            "descripcion": "Estudio segundo de diseño de aplicaciones web",
+            "direccion": "Motril, Granada, Spain",
+            "descripcion": "I am studiying 2º Web Applications Development",
             "telefono": "654879125",
             "redes_sociales":[
                     {
-                    "github":  "https://github.com/pablofm96", 
-                    "linkedin": "https://www.linkedin.com/in/pablo-ferres-546242205/"
+                    "texto": "Links of interest:",
+                    "github":  "https://github.com/pablofm96",
+                    "imagen_github": "./images/iconoGithub.png", 
+                    "linkedin": "https://www.linkedin.com/in/pablo-ferres-546242205/",
+                    "imagen_linkedin": "./images/iconoLinkedin.png"
                     }
                 ]
             }
@@ -96,18 +146,30 @@
         "experienciaprofesional":[
             {
                 "experiencia": "Professional experience",
-                "empleo0": "Comercial en una tienda de electrodomésticos y colchones",
-                "empleo1": "Repartidor de colchones y electrodomésticos"
+                "empleo0": "Commercial in an appliance and mattress store",
+                "duracion0": "Duration: 2016-2018",
+                "empleo1": "Mattress and appliance delivery man",
+                "duracion1": "Duration: Summer 2018, summer 2019, summer 2020"
             }
         ],
         "educacion":[
             {
                 "texto": "Education",
+                "texto1": "Place",
+                "texto2": "Title",
+                "texto3": "Date",
                 "estudio0":[
                     {   
                         "nombre": "ESO",
                         "centro": "IES La Zafra",
-                        "fecha": "Junio de 2012"
+                        "fecha": "September of 2008-June de 2012"
+                    }
+                ],
+                "estudio1":[
+                    {   
+                        "nombre": "DAW",
+                        "centro": "IES Francisco Ayala",
+                        "fecha": "September de 2018-June de 2021"
                     }
                 ]
             }
@@ -116,8 +178,17 @@
             {
                 "texto": "Skills",
                 "destreza0": "Java",
+                "imagen0": "./images/iconoJava.png",
                 "destreza1": "JavaScript",
-                "destreza2": "Vue"
+                "imagen1": "./images/iconoJavascript.png",
+                "destreza2": "Vue",
+                "imagen2": "./images/iconoVue.png",
+                "destreza3": "HTML5",
+                "imagen3": "./images/iconoHTML.png",
+                "destreza4": "Css3",
+                "imagen4": "./images/iconoCss3.png",
+                "destreza5": "Bootstrap",
+                "imagen5": "./images/iconoBootstrap.png"
             }
         ],
         "proyectos": [
@@ -128,21 +199,34 @@
         "idiomas": [
             {
                 "texto": "Languages",
-                "idioma0": "Español",
-                "idioma1": "Inglés"
+                "idioma0": "Spanish",
+                "idioma1": "English"
             }
         ],
         "referencias":[
             {
-                "texto": "References"
+                "texto": "References",
+                "referencia0":[
+                    {
+                        "empresa": "Milar Motril",
+                        "comentario": "Responsible, polite and good worker"
+                    }
+                ],
+                "referencia1":[
+                    {
+                        "empresa": "NatureDream",
+                        "comentario": "He has initiative and adapts quickly to work"
+                    }
+                ]
             }
         ],
         "contacto":[
             {
             "texto": "Contact",
-            "nombre": "Nombre",
-            "correo": "Correo Electrónico",
-            "mensaje": "Mensaje"
+            "nombre": "Name",
+            "correo": "Email",
+            "mensaje": "Message",
+            "enviar": "Submit"
             }
         ]
     }

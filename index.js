@@ -1,8 +1,12 @@
+
+window.onload = function(){
 var app= new Vue({
     el: '#app',
     data:{
         datos: null,
-        idioma: true
+        idioma: true,
+        mostrar: true,
+        modal: false
     },
 
     mounted(){
@@ -36,3 +40,7 @@ var app= new Vue({
     }
 
 })
+
+$('#github').tooltip({ boundary: 'window' })
+$('#linkedin').tooltip({ boundary: 'window' })
+}

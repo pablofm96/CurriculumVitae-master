@@ -4,80 +4,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Curriculum Vue</title>
 </head>
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
     <div id="app" v-if="datos">
-        <nav id="navbar" class="navbar sticky-top navbar-light bg-light">
+      <div class=" container-fluid row">
+       <nav id="navbar" class="col-sm-3 col-4 col-xl-2 bg-light collapse show">
+         <div class="container sticky-top">
             <a class="navbar-brand" href="#">Curriculum</a>
-            <button class="btn btn-primary" v-if="idioma" v-on:click="idiomaCambiar()">Inglés</button>
-            <button class="btn btn-primary" v-if="!idioma" v-on:click="idiomaCambiar()">Spanish</button>
-            <ul class="nav nav-pills">
-              <li class="nav-item">
+            <button class="btn btn-primary" v-if="idioma" v-on:click="idiomaCambiar()">English</button>
+            <button class="btn btn-primary" v-if="!idioma" v-on:click="idiomaCambiar()">Español</button>
+            <ul class="nav sticky-top nav-pills flex-column">
+              <li class="nav-item pt-2">
                 <a class="nav-link" href="#sobremi">{{obtenerjson.sobremi[0].sobre}}</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="#experiencia">{{obtenerjson.experienciaprofesional[0].experiencia}}</a>
-              </li>
-              <li>
-                  <a class="nav-link" href="#educacion">{{obtenerjson.educacion[0].texto}}</a>
-              </li>
-              <li>
+                <a class="nav-link" href="#educacion">{{obtenerjson.educacion[0].texto}}</a>
                 <a class="nav-link" href="#destrezas">{{obtenerjson.destrezas[0].texto}}</a>
-              </li>
-              <li>
-                  <a class="nav-link" href="#proyectos">{{obtenerjson.proyectos[0].texto}}</a>
-              </li>
-              <li>
-                <a class="nav-link" href="#idiomas">{{obtenerjson.idiomas[0].texto}}</a>
-              </li>
-              <li>
-                <a class="nav-link" href="#referencia">{{obtenerjson.referencias[0].texto}}</a>
-              </li>
-              <li>
-              <a class="nav-link" href="#contacto">{{obtenerjson.contacto[0].texto}}</a>
+                <a class="nav-link" href="#proyectos">{{obtenerjson.proyectos[0].texto}}</a>              
+                <a class="nav-link" href="#idiomas">{{obtenerjson.idiomas[0].texto}}</a>            
+                <a class="nav-link" href="#referencia">{{obtenerjson.referencias[0].texto}}</a>              
+                <a class="nav-link" href="#contacto">{{obtenerjson.contacto[0].texto}}</a>
               </li>
             </ul>
-          </nav>
-          <div>
-            <div id="sobremi">
+          </div>
+          </nav> 
+
+          <div  class="col-sm-9 col-8 col-xl-10 pl-5">
+            <div id="sobremi" class="pt-3">
                 <h4 id="fat">{{obtenerjson.sobremi[0].sobre}}</h4>
                 <p>{{obtenerjson.sobremi[0].nombre}} {{obtenerjson.sobremi[0].apellidos}}</p>
                 <p>{{obtenerjson.sobremi[0].fecha_nacimiento}}</p>
                 <p>{{obtenerjson.sobremi[0].telefono}}</p>
                 <p>{{obtenerjson.sobremi[0].direccion}}</p>
                 <p>{{obtenerjson.sobremi[0].descripcion}}</p>
-                <img :src="obtenerjson.sobremi[0].redes_sociales[0].imagen_github">
+                <h6>{{obtenerjson.sobremi[0].redes_sociales[0].texto}}</h6>
+                <a :href="obtenerjson.sobremi[0].redes_sociales[0].github" target="blank"><i id="github" class="fab fa-github" data-toggle="tooltip" data-placement="bottom" title="Github"></i></a>
+                <a :href="obtenerjson.sobremi[0].redes_sociales[0].linkedin" target="blank"><i id="linkedin" class="fab fa-linkedin"  data-toggle="tooltip" data-placement="bottom" title="Linkedin"></i></a>
             </div>
             <div id="experiencia">
                 <h4 id="fat">{{obtenerjson.experienciaprofesional[0].experiencia}}</h4>
-                <p>...</p>
+                <p>{{obtenerjson.experienciaprofesional[0].empleo0}}</p>
+                <p>{{obtenerjson.experienciaprofesional[0].duracion0}}</p>
+                <p>{{obtenerjson.experienciaprofesional[0].empleo1}}</p>
+                <p>{{obtenerjson.experienciaprofesional[0].duracion1}}</p>
             </div>
             <div id="educacion">
                 <h4 id="fat">{{obtenerjson.educacion[0].texto}}</h4>
-                <p>...</p>
+                <table class="table table-success">
+                  <thead>
+                    <tr>
+                      <th scope="col">{{obtenerjson.educacion[0].texto1}}</th>
+                      <th scope="col">{{obtenerjson.educacion[0].texto2}}</th>
+                      <th scope="col">{{obtenerjson.educacion[0].texto3}}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{{obtenerjson.educacion[0].estudio0[0].nombre}}</td>
+                      <td>{{obtenerjson.educacion[0].estudio0[0].centro}}</td>
+                      <td>{{obtenerjson.educacion[0].estudio0[0].fecha}}</td>
+                    </tr>
+                    <tr>
+                      <td>{{obtenerjson.educacion[0].estudio1[0].nombre}}</td>
+                      <td>{{obtenerjson.educacion[0].estudio1[0].centro}}</td>
+                      <td>{{obtenerjson.educacion[0].estudio1[0].fecha}}</td>
+                    </tr>
+                  </tbody>
+                </table>
             </div>
             <div id="destrezas">
                 <h4 id="fat">{{obtenerjson.destrezas[0].texto}}</h4>
-                <p>...</p>
-            </div>
+                <div class="row">
+                  <div class="col-sm-2">
+                    <div class="card">
+                      <div class="card-body">
+                        <img :src="obtenerjson.destrezas[0].imagen0" class="img-fluid" alt="java">
+                        <p class="card-text text-center text-primary">Java</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="card">
+                      <div class="card-body">
+                        <img :src="obtenerjson.destrezas[0].imagen1" class="img-fluid" alt="javascript">
+                        <p class="card-text text-center text-primary">Javascript</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="card">
+                      <div class="card-body">
+                        <img :src="obtenerjson.destrezas[0].imagen2" class="img-fluid" alt="vue">
+                        <p class="card-text text-center text-primary">Vue</p>
+                      </div>
+                    </div>
+                  </div>  
+                </div>
+                <div class="row pt-2">
+                  <div class="col-sm-2">
+                    <div class="card">
+                      <div class="card-body">
+                        <img :src="obtenerjson.destrezas[0].imagen3" class="img-fluid" alt="html">
+                        <p class="card-text text-center text-primary">HTML5</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="card">
+                      <div class="card-body">
+                        <img :src="obtenerjson.destrezas[0].imagen4" class="img-fluid" alt="css">
+                        <p class="card-text text-center text-primary">Css3</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="card">
+                      <div class="card-body">
+                        <img :src="obtenerjson.destrezas[0].imagen5" class="img-fluid" alt="bootstrap">
+                        <p class="card-text text-center text-primary">Bootstrap</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+            
             <div id="proyectos">
                 <h4 id="fat">{{obtenerjson.proyectos[0].texto}}</h4>
-                <p>...</p>
             </div>
             <div id="idiomas">
                 <h4 id="fat">{{obtenerjson.idiomas[0].texto}}</h4>
-                <p>...</p>
+                <p>{{obtenerjson.idiomas[0].idioma0}}</p>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p>{{obtenerjson.idiomas[0].idioma1}}</p>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
             <div id="referencia">
-                <h4 id="fat">{{obtenerjson.referencias[0].texto}}</h4>
-                <p>...</p>
+              <div id="transicion">
+                <transition name="fade">
+                  <div v-if="mostrar">
+                    <h4 id="fat">{{obtenerjson.referencias[0].texto}}</h4>
+                    <h6>{{obtenerjson.referencias[0].referencia0[0].empresa}}</h6>
+                    <p>{{obtenerjson.referencias[0].referencia0[0].comentario}}</p>
+                    <h6>{{obtenerjson.referencias[0].referencia1[0].empresa}}</h6>
+                    <p>{{obtenerjson.referencias[0].referencia1[0].comentario}}</p>
+                </div>
+                </transition>
+                <button v-on:click="mostrar = !mostrar" class="btn btn-info">
+                  Ocultar
+                </button>
+              </div>
+                
             </div>
-            <div id="contacto">
+            <div id="contacto pt-2">
                 <h4 id="fat">{{obtenerjson.contacto[0].texto}}</h4>
-                <p>...</p>
+                <form>
+                  <div class="form-group">
+                    <label for="nombre">{{obtenerjson.contacto[0].nombre}}</label>
+                    <input type="text" class="form-control" id="nombre" required >
+                  </div>
+                  <div class="form-group">
+                    <label for="mensaje">{{obtenerjson.contacto[0].mensaje}}</label>
+                    <input type="text" class="form-control" id="mensaje" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">{{obtenerjson.contacto[0].correo}}</label>
+                    <input type="email" class="form-control" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
+                  </div>
+                  <button type="submit" class="btn btn-primary">{{obtenerjson.contacto[0].enviar}}</button>
+                </form>
             </div>
+            </div>
+          </div>
           </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
