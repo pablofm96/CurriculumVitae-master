@@ -160,8 +160,7 @@
                             <img :src="obtenerjson.proyectos[0].proyecto0[0].imagen1" class="img-fluid" alt="pong">
                           </div>
                           <div class="col-sm-6">
-                            <h3>{{obtenerjson.proyectos[0].proyecto0[0].texto1}}</h3>
-                            <p>{{obtenerjson.proyectos[0].proyecto0[0].enlace}}</p>
+                            <h3><a :href="obtenerjson.proyectos[0].proyecto0[0].enlace" target="blank">{{obtenerjson.proyectos[0].proyecto0[0].texto1}}</h3></a>
                             <h3>{{obtenerjson.proyectos[0].proyecto0[0].texto2}}</h3>
                             <p>{{obtenerjson.proyectos[0].proyecto0[0].resumen}}</p>
                           </div>
@@ -202,10 +201,8 @@
                           <img :src="obtenerjson.proyectos[0].proyecto1[0].imagen2" class="img-fluid" alt="landinPage1">
                         </div>
                         <div class="col-sm-6">
-                          <h3>{{obtenerjson.proyectos[0].proyecto1[0].texto1}}</h3>
-                          <p>{{obtenerjson.proyectos[0].proyecto1[0].enlace}}</p>
-                          <h3>{{obtenerjson.proyectos[0].proyecto1[0].texto2}}</h3>
-                          <p>{{obtenerjson.proyectos[0].proyecto1[0].enlace2}}</p>
+                          <h3><a :href="obtenerjson.proyectos[0].proyecto1[0].enlace" target="blank">{{obtenerjson.proyectos[0].proyecto1[0].texto1}}</h3></a>
+                          <h3><a :href="obtenerjson.proyectos[0].proyecto1[0].enlace2" target="blank">{{obtenerjson.proyectos[0].proyecto1[0].texto2}}</h3></a>
                           <h3>{{obtenerjson.proyectos[0].proyecto1[0].texto3}}</h3>
                           <p>{{obtenerjson.proyectos[0].proyecto1[0].resumen}}</p>
                         </div>
