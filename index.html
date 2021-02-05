@@ -11,11 +11,11 @@
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
     <div id="app" v-if="datos">
       <div class=" container-fluid row">
-       <nav id="navbar" class="col-sm-3 col-4 col-xl-2 bg-light collapse show">
+       <nav id="navbar" class="col-sm-3 col-4 col-xl-2 bg-dark collapse show">
          <div class="container sticky-top">
             <a class="navbar-brand" href="#">Curriculum</a>
-            <button class="btn btn-primary" v-if="idioma" v-on:click="idiomaCambiar()">English</button>
-            <button class="btn btn-primary" v-if="!idioma" v-on:click="idiomaCambiar()">Español</button>
+            <button class="btn btn-success" v-if="idioma" v-on:click="idiomaCambiar()">English</button>
+            <button class="btn btn-success" v-if="!idioma" v-on:click="idiomaCambiar()">Español</button>
             <ul class="nav sticky-top nav-pills flex-column">
               <li class="nav-item pt-2">
                 <a class="nav-link" href="#sobremi">{{obtenerjson.sobremi[0].sobre}}</a>
@@ -131,7 +131,94 @@
                 </div>
             
             <div id="proyectos">
-                <h4 id="fat">{{obtenerjson.proyectos[0].texto}}</h4>
+              <h4 id="fat">{{obtenerjson.proyectos[0].texto}}</h4>
+              <div class="row">
+                <div class="col-sm-2 dol text-center">
+                <div class="card">
+                  <div class="card-body">
+                    <img :src="obtenerjson.proyectos[0].proyecto0[0].imagen1" class="img-fluid" alt="pong">
+                    <p class="card-text text-center text-primary">{{obtenerjson.proyectos[0].proyecto0[0].titulo}}</p>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#proyecto1">
+                      Más información
+                    </button>
+                  </div>
+                
+                
+                <div class="modal fade" id="proyecto1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">{{obtenerjson.proyectos[0].proyecto0[0].titulo}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <img :src="obtenerjson.proyectos[0].proyecto0[0].imagen1" class="img-fluid" alt="pong">
+                          </div>
+                          <div class="col-sm-6">
+                            <h3>{{obtenerjson.proyectos[0].proyecto0[0].texto1}}</h3>
+                            <p>{{obtenerjson.proyectos[0].proyecto0[0].enlace}}</p>
+                            <h3>{{obtenerjson.proyectos[0].proyecto0[0].texto2}}</h3>
+                            <p>{{obtenerjson.proyectos[0].proyecto0[0].resumen}}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{obtenerjson.proyectos[0].texto2}}</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <div class="col-sm-2 dol text-center">
+              <div class="card">
+                <div class="card-body">
+                  <img :src="obtenerjson.proyectos[0].proyecto1[0].imagen1" class="img-fluid" id="landing" alt="landingPage">
+                  <p class="card-text text-center text-primary">{{obtenerjson.proyectos[0].proyecto1[0].titulo}}</p>
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#proyecto2">
+                    Más información
+                  </button>
+                </div>
+              
+              
+              <div class="modal fade" id="proyecto2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Landing page</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <img :src="obtenerjson.proyectos[0].proyecto1[0].imagen1" class="img-fluid" alt="landinPage1">
+                          <img :src="obtenerjson.proyectos[0].proyecto1[0].imagen2" class="img-fluid" alt="landinPage1">
+                        </div>
+                        <div class="col-sm-6">
+                          <h3>{{obtenerjson.proyectos[0].proyecto1[0].texto1}}</h3>
+                          <p>{{obtenerjson.proyectos[0].proyecto1[0].enlace}}</p>
+                          <h3>{{obtenerjson.proyectos[0].proyecto1[0].texto2}}</h3>
+                          <p>{{obtenerjson.proyectos[0].proyecto1[0].enlace2}}</p>
+                          <h3>{{obtenerjson.proyectos[0].proyecto1[0].texto3}}</h3>
+                          <p>{{obtenerjson.proyectos[0].proyecto1[0].resumen}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">{{obtenerjson.proyectos[0].texto2}}</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
             </div>
             <div id="idiomas">
                 <h4 id="fat">{{obtenerjson.idiomas[0].texto}}</h4>

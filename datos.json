@@ -72,16 +72,28 @@
         "proyectos": [
             {
                 "texto":"Proyectos",
+                "texto2": "Cerrar",
                 "proyecto0":[
                     {
-                        "Enlace": "https://github.com/pablofm96/DesarrolloEntornoCliente/tree/main/Tema5/Juego",
-                        "Nombre": "Pong en JS"
+                        "texto1": "Enlace a repositorio: ",
+                        "enlace": "https://github.com/pablofm96/DesarrolloEntornoCliente/tree/main/Tema5/Juego",
+                        "titulo": "Pong en JS",
+                        "texto2": "Resumen",
+                        "resumen": "Proyecto del juego Pong realizado con Javascript para la asignatura de Desarrollo entorno cliente",
+                        "imagen1": "./images/pong.png"
                     }
                 ],
                 "proyecto1":[
                     {
-                        "Enlace": "https://pablofm96.github.io/ProyectoJQuery/",
-                        "Nombre": "Landing Page"
+                        "texto1": "Enlace a producción: ",
+                        "enlace": "https://pablofm96.github.io/ProyectoJQuery/",
+                        "texto2": "Enlace a repositorio: ",
+                        "enlace2": "https://github.com/pablofm96/ProyectoJQuery",
+                        "imagen1": "./images/landingPage1.png",
+                        "imagen2": "./images/landingPage2.png",
+                        "titulo": "Landing Page",
+                        "texto3": "Resumen",
+                        "resumen": "Proyecto de landing page realizado para las asignaturas de Desarrollo entorno cliente y Diseño de interfaces con JQuery"
                     }
                 ]
             }
@@ -193,7 +205,31 @@
         ],
         "proyectos": [
             {
-                "texto":"Projects"
+                "texto":"Projects",
+                "texto2": "Close",
+                "proyecto0":[
+                    {
+                        "texto1": "Link to repository: ",
+                        "enlace": "https://github.com/pablofm96/DesarrolloEntornoCliente/tree/main/Tema5/Juego",
+                        "titulo": "Pong in JS",
+                        "texto2": "Summary",
+                        "resumen": "Pong game project made with Javascript for the subject of Client Environment Development",
+                        "imagen1": "./images/pong.png"
+                    }
+                ],
+                "proyecto1":[
+                    {
+                        "texto1": "Link to production: ",
+                        "enlace": "https://pablofm96.github.io/ProyectoJQuery/",
+                        "texto2": "Link to repository: ",
+                        "enlace2": "https://github.com/pablofm96/ProyectoJQuery",
+                        "imagen1": "./images/landingPage1.png",
+                        "imagen2": "./images/landingPage2.png",
+                        "titulo": "Landing Page",
+                        "texto3": "Summary",
+                        "resumen": "Landing page project carried out for the subjects of Client Environment Development and Interface Design with JQuery"
+                    }
+                ]
             }
         ],
         "idiomas": [
