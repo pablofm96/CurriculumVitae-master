@@ -139,7 +139,7 @@
                     <img :src="obtenerjson.proyectos[0].proyecto0[0].imagen1" class="img-fluid" alt="pong">
                     <p class="card-text text-center text-primary">{{obtenerjson.proyectos[0].proyecto0[0].titulo}}</p>
                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#proyecto1">
-                      Más información
+                      {{obtenerjson.texto2}}
                     </button>
                   </div>
                 
@@ -180,7 +180,7 @@
                   <img :src="obtenerjson.proyectos[0].proyecto1[0].imagen1" class="img-fluid" id="landing" alt="landingPage">
                   <p class="card-text text-center text-primary">{{obtenerjson.proyectos[0].proyecto1[0].titulo}}</p>
                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#proyecto2">
-                    Más información
+                    {{obtenerjson.texto2}}
                   </button>
                 </div>
               
@@ -243,7 +243,7 @@
                 </div>
                 </transition>
                 <button v-on:click="mostrar = !mostrar" class="btn btn-info">
-                  Ocultar
+                  {{obtenerjson.texto1}}
                 </button>
               </div>
                 

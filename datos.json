@@ -1,5 +1,8 @@
 {
     "espanol":{
+
+        "texto1": "Ocultar",
+        "texto2": "Mas información",
         "sobremi":[
             {
             "sobre":"Sobre mi",
@@ -134,6 +137,8 @@
     },
 
     "ingles":{
+        "texto1": "Hide",
+        "texto2": "More information",
         "sobremi":[
             {
             "sobre":"About me",
